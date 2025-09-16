@@ -5,29 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>analog_clock</title>
 
-<style>
-/* 画面全体に対応させるために html と body を100%に */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-/* 全画面に枠線付きのボックス */
-.clock-box {
-  height: 100%;           /* 高さ100% */
-  width: 100%;            /* 幅100% */
-  background: #f2f2f2;
-  border: 3px solid #ccc; /* 枠線 */
-  border-radius: 12px;
-  box-sizing: border-box;  /* 枠線込みでサイズ調整 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1rem;
-  text-align: center;
-}
-        
+<style>       
 .clock {
   background: #ececec;
   width: 300px;
@@ -177,7 +155,6 @@ span {
 
 
 <body>
-<div class="clock-box">
 <div class="clock">
   <div>
     <div class="info date"></div>
@@ -197,7 +174,6 @@ span {
   </div>
   <div class="diallines"></div>
 </div>
-</div>
 
 
 <script>
@@ -211,13 +187,20 @@ for (var i = 1; i < 60; i++) {
 
 function clock() {
   var weekday = [
-        "Sunday",
+      "日",
+      "月",
+      "火",
+      "水",
+      "木",
+      "金",
+      "土"      
+        /* "Sunday",
         "Monday",
         "Tuesday",
         "Wednesday",
         "Thursday",
         "Friday",
-        "Saturday"
+        "Saturday" */
       ],
       d = new Date(),
       h = d.getHours(),
